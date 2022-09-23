@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+	    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+   <title>My Boo</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+
+</head>
+
+
+<body>
+	<center>
+
+		<br>
+		<br>
+		<br>
+				<br>
+		<br>
+		<br>		<br>
+		<br>
+		<br>
+	<div class="wrapper">
+		<div class="container">
+			<p id="question">Mahal mo ba ako?</p><hr>
+			<button class="btn btn-success" id="yes">Oo :D</button>
+			<button class="btn btn-danger" id="hinde">Hinde >:(</button>
+		</div>
+	</div>
+</body>
+<script>
+	const noBtn = document.getElementById('hinde');
+	const yesBtn = document.getElementById('yes');
+	const ques = document.getElementById('question');
+	noBtn.addEventListener("click", ()=>{
+		let rand = Math.floor(Math.random() * (150 - 10) + 1);
+		let rand2 = Math.floor(Math.random() * (-50 - 90) + 1);
+		noBtn.style.transform = "translate("+rand+"px,"+rand2+"px)";
+	});
+	var count = 0;
+yesBtn.onclick = function() {
+  count++;
+  console.log("count: " + count);
+  if(count == 1){
+  	ques.innerHTML = "Weh talaga ba?";
+  } else if(count == 2){
+  	ques.innerHTML = "Sure na talaga?";
+  }else if (count == 3){
+  	ques.innerHTML = "Okay last na hehe";
+  	yesBtn.innerHTML = "Okay :>";
+  	noBtn.remove();
+  }else{
+  	yesBtn.remove();
+ 
+  	ques.innerHTML = "Hi boo! I just want to thank God (if there's a real God) for having you. I don't regret anything about from you<br>You are the shiniest thing in my life. You are my sunshine, My only sunshine. Please don't change and continue loving me, <br> Please don't regret for having me. I know i'm not perfect but i'm trying to be better day by day. Please don't let it go when we're having <br> difficult times. I know i'm stubborn sometimes but please don't leave me. I love you every single day and <br> every single seconds. I hope this random present can make your mood better. Again, I love you so much my Boo, <br> my Juliana, my Huleng, my Juls, my Pyang, my Yannah, my Yanyan, and my Everything.<br><b> I Love You So Much! <3</b>";
+  }
+};
+
+//	yesBtn.addEventListener("click", ()=>{
+	//	ques.innerHTML = "I love you too mahal ko <3"
+//	})
+</script>
+</center>
+</body>
+</html>
